@@ -8,5 +8,5 @@ ENV LOG_LEVEL="INFO"
 
 RUN  yum -y install https://s3.amazonaws.com/streaming-data-agent/aws-kinesis-agent-latest.amzn1.noarch.rpm 
 
-CMD /usr/bin/start-aws-kinesis-agent -L $LOG_LEVEL -l /dev/stdout
+CMD /usr/bin/start-aws-kinesis-agent -L $LOG_LEVEL -l /var/log/aws-kinesis-agent/aws-kinesis-agent.log
 
